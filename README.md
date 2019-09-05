@@ -1,7 +1,7 @@
 # django-blog
 
-Credit to Corey Schafer, I followed his Django series on YouTube for this project.
-https://coreyms.com/
+Credit to Corey Schafer, I followed his Django series on YouTube for this project. <br>
+https://coreyms.com/ <br>
 
 ![Home page WIP:](./home-demo.png)
 
