@@ -4,9 +4,9 @@ A WIP blog where users can make posts about either a song, album, or artist; rat
 Credit to Corey Schafer, I followed his Django series on YouTube for most of this project.
 https://coreyms.com/ <br>
 
-![Home page WIP:](./home-wip.png)
+![Homepage WIP:](./home-wip.png)
 
-![Registration page WIP:](./register.png)
+![Registration page:](./register.png)
 
 Things I learned from this project:
 - Creating Django apps
