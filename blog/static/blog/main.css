@@ -44,7 +44,7 @@ ul {
 }
 
 a.article-title:hover {
-  color: #ffc9dc;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -86,7 +86,11 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.mr-2 {
+.list-group-item {
+  background:#474747;
+}
+
+a.mr-2 {
   color: #ff337a;
 }
 
@@ -94,24 +98,48 @@ a.mr-2:hover {
   color: #ff7daa;
 }
 
-.btn {
+a {
+  color: #ff337a;
+}
+a:hover {
+  color: #ff005a;
+}
+
+#username {
+  color: #ffadca;
+}
+
+#username:hover {
+  color: #ffdeea;
+}
+
+.btn-outline-info {
   color: #ff337a;
   border-color: #ff337a;
 }
 
-.btn:hover {
+.btn-outline-info:hover {
   color: #ffffff;
   border-color: #ff337a;
   background-color: #ff337a;
 }
 
-.ml-2 {
-  color: #ff337a;
-}
-.ml-2:hover {
-  color: #ff005a;
+.btn-info {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-.list-group-item {
-  background:#474747;
+.btn-info:hover {
+  color: #ffffff;
+  background-color: #ff6b9f;
+  border-color: #ff6b9f;
+}
+
+.rating-detail {
+  color: #ffffff;
+}
+
+h2, h5, h6 {
+  display: inline;
 }
