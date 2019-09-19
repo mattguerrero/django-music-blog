@@ -1,12 +1,15 @@
 # django-blog
 
 A WIP blog where users can make posts about either a song, album, or artist; rate the subject matter with some commentary, and provide a link (to spotify) to share music! <br>
-Credit to Corey Schafer, I followed his Django series on YouTube for most of this project.
+
+Credit to Corey Schafer, I followed his Django series on YouTube for the beginning of this project.
 https://coreyms.com/ <br>
 
-![Homepage WIP:](./home-wip.png)
+Homepage
+![Homepage WIP:](./home.png)
 
-![Registration page:](./register.png)
+Search Example
+![Registration page:](./search.png)
 
 Things I learned from this project:
 - Creating Django apps
@@ -20,4 +23,6 @@ Things I learned from this project:
 - Login and logout (authorization)
 - User information and images (updating information)
 - Post creation, updating, and deletion (class based views)
-- Pagination (Paginator objects)
+- Pagination (paginator objects)
+- Tagging
+- Search (filter post objects)
