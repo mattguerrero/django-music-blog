@@ -9,24 +9,35 @@
             <small class="text-muted">{{ post.date|date:"F d, Y | h:i a" }}</small>
             </div>
 
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <h5>({{ post.category }})</h5>
-            <h6 class="rating-detail">{{ post.rating }}/10</h6>
+            <a class="article-title" href="{% url 'post-detail' post.id %}">
+            <h2>{{ post.title }}</h2>
+                {% if post.title != post.artist %}
+                    <h4> by {{ post.artist }} </h4>
+                {% endif %}
+            </a>
+            <h5 class="rating-detail">{{ post.rating }}/10</h5>
+            <p></p>
 
-            <p class="article-content">{{ post.content }}</p>
+            <!-- <p class="article-content">{{ post.content }}</p>
+            -->
             <iframe class="article-content" 
             src="{{ post.link }}" 
             width="300" height="80" frameborder="0" 
             allowtransparency="true" allow="encrypted-media"></iframe>
+
+            <!-- <div class="article-metadata"></div>
+            {% for tag in post.tags.names %}
+                <small class="text-muted"> #{{ tag }}</small>
+            {% endfor %}
+            -->
         </div>
     </article>
     {% endfor %}
     {% if is_paginated %}
 
         {% if page_obj.has_previous %}
-            <a class="btn btn-outline-info mb-4" href="?page=1"> First </a>
-            <!-- <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}"> Previous </a>
-            -->
+            <a class="btn btn-outline-info mb-4" href="?page=1"> <b><<</b> </a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}"> < </a>
         {% endif %}
 
         {% for num in page_obj.paginator.page_range %}
@@ -38,9 +49,9 @@
         {% endfor %}
 
         {% if page_obj.has_next %}
-            <!-- <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}"> Next </a>
-            -->
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}"> Last </a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}"> > </a>
+        
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}"> <b>>></b> </a>
         {% endif %}
 
     {% endif %}

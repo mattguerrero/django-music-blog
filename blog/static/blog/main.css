@@ -6,10 +6,6 @@ body {
     color: #cfcfcf;
     margin-top: 5rem;
 }
-  
-h1, h2, h3, h4, h5, h6 {
-  color: #b8b8b8;
-}
 
 ul {
   margin: 0;
@@ -40,7 +36,7 @@ ul {
 }
 
 .article-title {
-  color: #b8b8b8;
+  color: #d6d6d6;
 }
 
 a.article-title:hover {
@@ -137,9 +133,24 @@ a:hover {
 }
 
 .rating-detail {
-  color: #ffffff;
+  color: #808080;
 }
 
-h2, h5, h6 {
+h2, h4, h5 {
   display: inline;
+}
+
+#search-box {
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-color: #ffffff;
+}
+
+#search-btn{
+  margin-bottom: 0px;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  color: #ffffff;
+  background-color: #ff337a;
+  border-color: #ff337a;
 }

@@ -8,19 +8,25 @@
             <small class="text-muted">{{ object.date|date:"F d, Y | h:i a" }}</small>
         </div>
 
-        <h2 class="article-title"> {{ object.title }} </h2> 
-        <h5>({{ object.category }})</h5>
-        <h6 class="rating-detail">{{ object.rating }}/10</h6>
+        <h2 class="article-title"> {{ object.title }} 
+            {% if object.title != object.artist %}
+                <h4> by {{ object.artist }} </h4>
+            {% endif %}
+        </h2> 
+        <h5 class="rating-detail">{{ object.rating }}/10</h5>
 
         <p class="article-content">{{ object.content }}</p>
         <iframe class="article-content" 
         src="{{ object.link }}" 
         width="300" height="80" frameborder="0" 
         allowtransparency="true" allow="encrypted-media"></iframe>
-        
+
+        <div class="article-metadata"></div>
+        {% for tag in object.tags.names %}
+            <small class="text-muted"> #{{ tag }}</small>
+        {% endfor %}
+
         {% if object.author == user %}
-        <div class="article-metadata">
-        </div>
         <div>
             <a class="btn btn-outline-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}"> Update </a>
             <a class="btn btn-outline-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}"> Delete </a>

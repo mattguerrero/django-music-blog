@@ -29,8 +29,14 @@
                     </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
-                        <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                        
+                        <form class="form-inline" action="{% url 'post-search'%}" method="get" accept-charset="utf-8">
+                            <input id="search-box" class="" name="q" type="text" placeholder="Search">
+                            <button id="search-btn" class="btn-sm" type="submit" name="page" value="1">
+                                ♫
+                            </button>
+                        </form>
+
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -67,8 +73,12 @@
             <div class="content-section">
                 <h3>Quick Links</h3>
                 <ul class="list-group">
-                    <li class="list-group-item list-group-item-light">My Posts</li>
-                    <li class="list-group-item list-group-item-light">Search</li>
+                    <li class="list-group-item list-group-item-light">
+                        <a href="{% url 'blog-home' %}">Home</a>
+                    </li>
+                    <li class="list-group-item list-group-item-light">
+                        <a href="{% url 'blog-about' %}">Info</a>
+                    </li>
                 </ul>
                 </p>
             </div>
